@@ -8,7 +8,6 @@ const User = require('../models/User')
 
 router.post('/sign-up', async (req, res) => {
     try {
-
         // Check if the username is taken
         const userInDatabase = await User.findOne({ username: req.body.username })
 
