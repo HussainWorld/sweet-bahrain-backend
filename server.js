@@ -7,6 +7,7 @@ const cors = require('cors')
 const logger = require('morgan')
 const authRouter = require('./controllers/auth')
 const usersRouter = require('./controllers/users')
+const productsRouter = require('./controllers/products')
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -21,6 +22,7 @@ app.use(logger('dev'))
 // Routes go here
 app.use('/auth', authRouter)
 app.use('/users', usersRouter)
+app.use('/products', productsRouter)
 
 
 
