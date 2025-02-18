@@ -8,6 +8,7 @@ const logger = require('morgan')
 const authRouter = require('./controllers/auth')
 const usersRouter = require('./controllers/users')
 const productsRouter = require('./controllers/products')
+const ordersRouter = require('./controllers/orders')
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -23,6 +24,7 @@ app.use(logger('dev'))
 app.use('/auth', authRouter)
 app.use('/users', usersRouter)
 app.use('/products', productsRouter)
+app.use('/orders', ordersRouter)
 
 
 
