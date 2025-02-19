@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Product = require('../models/Product')
-const verifyToken = require('..//middleware/verify-token')
+const verifyToken = require('../middleware/verify-token')
 
 // GET all products
 router.get('/', async (req, res) => {
