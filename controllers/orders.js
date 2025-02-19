@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const Order = require('../models/Order');
+const verfiyToken = require('../middleware/verify-token');
 
 // POST a new order
 router.post('/', async (req, res) => {
@@ -27,5 +28,20 @@ router.post('/', async (req, res) => {
     res.status(500).json({ err: err.message})
   }
 })
+
+
+//DELETE Order
+router.delete('/:id', verfiyToken, async (req, res) => {
+  try{
+    const deletedOrder = await Order.findByIdAndDelete(req.params.id)
+    if(!deletedOrder){
+      return res.status(404).json({ err: 'Order not found'})
+    }
+    res.json({ message: 'Order deleted successfully'})
+  }catch(err){
+    res.status(500).json({ err: err.message })
+  }
+})
+
 
 module.exports = router
