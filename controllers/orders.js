@@ -30,6 +30,17 @@ router.post('/', async (req, res) => {
 })
 
 
+//GET all orders
+router.get('/', async (req, res) => {
+  try{
+    const orders = await Order.find({});
+    res.json(orders)
+  }catch(err){
+    res.status(500).json({ err: err.message })
+  }
+})
+
+
 //DELETE Order
 router.delete('/:id', verfiyToken, async (req, res) => {
   try{
