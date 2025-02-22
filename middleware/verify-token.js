@@ -7,6 +7,12 @@ function verifyToken(req, res, next) {
         // Assign decoded payload to req.user
         req.user = decoded.payload
 
+        // For admin-only routes
+        if (req.baseUrl.includes('/products') && req.method !== 'GET') {
+            if (req.user.userType !== 'admin') {
+                return res.status(403).json({ err: 'Admin access required' })
+            }
+        }
 
         next()
     } catch(err) {
