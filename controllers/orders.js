@@ -48,7 +48,7 @@ router.put('/:orderId', async (req, res) => {
     const token = req.headers.authorization.split(' ')[1]
     //decodeing the token
     const decoded = jwt.verify(token, process.env.JWT_SECRET)
-    const user = decoded.payload
+    const user = decoded.payload 
 
 
       if(!order) return res.status(404).json({error: "Not Found"});
