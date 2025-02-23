@@ -69,9 +69,6 @@ router.put('/:orderId', async (req, res) => {
   };
 });
 
-
-
-
 //DELETE Order
 router.delete('/:id', verfiyToken, async (req, res) => {
   try{
