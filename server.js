@@ -26,8 +26,6 @@ app.use('/users', usersRouter)
 app.use('/products', productsRouter)
 app.use('/orders', ordersRouter)
 
-
-
 app.listen( process.env.PORT || 3000, () => {
     console.log("The express app is ready")
 })

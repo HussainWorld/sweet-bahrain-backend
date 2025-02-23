@@ -40,6 +40,34 @@ router.get('/', async (req, res) => {
   }
 })
 
+//PUT  Update Order
+router.put('/:orderId', async (req, res) => {
+  try {
+      const order = await Order.findById(req.params.orderId);
+          //spliting the token
+    const token = req.headers.authorization.split(' ')[1]
+    //decodeing the token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET)
+    const user = decoded.payload 
+
+
+      if(!order) return res.status(404).json({error: "Not Found"});
+      if (!order.user.equals(user._id)) {
+          return res.status(403).send("You're not allowed to do that!");
+      };
+      
+      const updatedOrder = await Order.findByIdAndUpdate(
+          req.params.orderId,
+          req.body,
+          {new: true}
+      );
+  
+      updatedOrder._doc.author = user;
+      res.status(200).json(updatedOrder);
+  } catch (error) {
+      res.status(422).json(error.message);
+  };
+});
 
 //DELETE Order
 router.delete('/:id', verfiyToken, async (req, res) => {
