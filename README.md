@@ -3,7 +3,7 @@
 ## Landing Page
 ![SweetBahrain Landing Page](./public/LandingPage.png)
 
-## Dashboard Page
+## Dashboard Page 
 ![SweetBahrain Landing Page](./public/DashboardPage.png)
 
 ## Description
