@@ -3,20 +3,33 @@
 ## Landing Page
 ![SweetBahrain Landing Page](./public/LandingPage.png)
 
-## Dashboard Page 
+## Dashboard Page
 ![SweetBahrain Landing Page](./public/DashboardPage.png)
 
 ## Description 
 
 Sweet Bahrain is a full-stack e-commerce platform designed for ordering sweets. The project consists of a frontend built with React and Bootstrap, and a backend built with Node.js and Express. The application allows users to browse products, place orders, and manage their accounts. Admin users have additional capabilities to create and edit products.
 
-**Deployed Website:** [Sweet Bahrain](https://sweet-bahrain-frontend-git-main-fares-yusufs-projects.vercel.app/)
+---
 
+## Background
+
+Sweet Bahrain was created to provide a seamless online shopping experience for customers looking to order traditional and modern sweets. The goal was to build a user-friendly platform that allows users to easily browse products, place orders, and manage their accounts. The project also aimed to provide admin users with tools to manage products and orders efficiently.
+
+---
+ 
+## Getting Started
+
+- **Deployed App**: [Sweet Bahrain](https://sweet-bahrain-frontend-git-main-fares-yusufs-projects.vercel.app/)
+- **Frontend Repository**: [Sweet Bahrain Frontend](https://github.com/HussainWorld/sweet-bahrain-frontend)
+- **Backend Repository**: [Sweet Bahrain Backend](https://github.com/HussainWorld/sweet-bahrain-backend)
+- **Planning Materials**: [Link to Wireframes/User Stories/Project Board](https://trello.com/invite/b/67b201f01e9cb3fa9e4e7d74/ATTIb2b409627f760a9c46599c0a9bd052ff5CBDFF8C/chocolate-bahrain)
 ---
 
 ## Project Structure
 
 ### Frontend
+
 
 ```
 SWEET-BAHRAIN-FRONTEND/
@@ -82,6 +95,7 @@ SWEET-BAHRAIN-FRONTEND/
 ---
 
 
+
 ---
 
 ## Table of Contents
@@ -129,7 +143,7 @@ SWEET-BAHRAIN-FRONTEND/
         node server.js
         ```
 
-    The frontend will be available at `http://localhost:3000` and the backend at ` http://localhost:5173/`.
+    The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:5173/`.
 
 ## Usage
 
@@ -196,6 +210,23 @@ The `authService` handles user authentication.
   - **Git**: Version control system.
   - **Vercel**: Deployment platform for frontend.
   - **Morgan**: HTTP request logger for Node.js.
+
+---
+
+## Attributions
+
+- [Bootstrap](https://getbootstrap.com/): Used for styling and responsive design.
+- [React Icons](https://react-icons.github.io/react-icons/): Used for icons in the application.
+- [Vite](https://vitejs.dev/): Used as the build tool for the frontend.
+
+---
+
+## Next Steps
+
+- **User Reviews**: Allow users to leave reviews and ratings for products.
+- **Payment Integration**: Integrate a payment gateway for seamless transactions.
+- **Advanced Search**: Implement advanced search and filtering options for products.
+- **Mobile App**: Develop a mobile version of the application for iOS and Android.
 
 ---
 
