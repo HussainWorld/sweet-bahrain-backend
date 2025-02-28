@@ -8,7 +8,7 @@
 
 ## Description 
 
-Sweet Bahrain is a full-stack e-commerce platform designed for ordering sweets. The project consists of a frontend built with React and Bootstrap, and a backend built with Node.js and Express. The application allows users to browse products, place orders, and manage their accounts. Admin users have additional capabilities to create and edit products.
+Sweet Bahrain is a MERN-stack e-commerce platform designed for ordering sweets. The project consists of a frontend built with React and Bootstrap, and a backend built with Node.js and Express. The application allows users to browse products, place orders, and manage their accounts. Admin users have additional capabilities to create and edit products.
 
 ---
 
